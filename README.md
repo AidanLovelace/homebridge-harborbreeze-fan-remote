@@ -20,7 +20,9 @@ Make sure `wiring-pi` is installed. `sudo apt install wiring-pi`
 Install this plugin `sudo npm install -g git+https://github.com/aidanlovelace/homebridge-harborbreeze-fan-remote.git`.
 
 Add the accessory to your Homebridge config.
-	{
-      "accessory": "HarborBreezeFan",
-      "name": "Ceiling Fan"
-    }
+```
+{
+    "accessory": "HarborBreezeFan",
+    "name": "Ceiling Fan"
+}
+```
