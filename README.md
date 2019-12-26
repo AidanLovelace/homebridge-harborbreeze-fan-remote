@@ -1,9 +1,6 @@
 # Harbor Breeze Fan Remote Homebridge Plug-in
 This allows you to control a Harbor Breeze controller for ceiling fans.
 
-## Development Challenges
-The fan allows you to order it to a specific state, but the remote only has a toggle button for the light which makes it difficult to order a specific state for the _light_. However, I found that if you hold down the light button for 5 seconds, you can guarantee that the light is on because the dimming function begins after 5 seconds. So, if the light is off, it will turn on on the rising-edge of the button press, and if the falling-edge resides 5 or more seconds later, the light will begin to change its brightness. If the light is already on, it won’t do anything on the rising-edge of the button press, and around 5 seconds after the rising-edge or the falling-edge, whichever comes first, the light will turn on. You may expect that this would cause the brightness of the light to be erratic, but only after 5 seconds will the brightness begin to change slowly, so it should remain very close to constant.
-
 ## Prerequisites
 The plugin can only run on a Raspberry Pi with `wiring-pi` installed. `sudo apt install wiring-pi` Sadly, I couldn’t get `node-wiring-pi` to compile on my Raspberry Pi Zero W, so I made the plugin call system commands.
 
